@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button class="btn btn-primary">Subir</button>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Subir</button>
                     <button class="btn btn-default" type="reset">Borrar</button>
                 </div>
             </form>
@@ -40,6 +40,32 @@
         </script>
 
         <table></table>
+
+        <div class="container">
+            <!-- Trigger the modal with a button -->
+            
+
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+                
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-body">
+                    <p>¿Seguro que quiere importar este archivo?</p>
+                    </div>
+
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Aceptar</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    </div>
+                </div>
+                
+                </div>
+            </div>
+            
+        </div>
+
 
     </section>
       <!-- DENTRO DE ESTAS ETIQUETAS COLOCAS TODO EL CONTENIDO -->
