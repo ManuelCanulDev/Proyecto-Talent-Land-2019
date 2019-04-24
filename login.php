@@ -1,3 +1,31 @@
+<?php
+   include("App/Config.php");
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form 
+      
+      $myusername = mysqli_real_escape_string($db,$_POST['username']);
+      $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+
+      $sql = "SELECT * FROM usuarios WHERE correo_usuario = '$myusername' AND password_usuario = '$mypassword'";
+
+      $result = mysqli_query($db,$sql);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      
+      
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
+        
+      if($count == 1) {
+         session_start();
+         $_SESSION['login_user'] = $myusername;
+         
+         header("location: home.php");
+      }else {
+         $error = "Tu usuario o contraseña es incorrecto";
+      }
+   }
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -24,14 +52,14 @@
 
                 <div> 
                     <div style="margin-top: 25px; width: 100%;">
-
+                   <form action = "" method = "post">
                         <div>
                             <div style="margin-left: 36% ; margin-right: 20%;">
                                 <div class="input-group-prepend" style="display:inline-block; align-content: center">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
 
-                                <input type="text" placeholder="usuario" style="width: 350px; display:inline-block; border-top-color: transparent; border-left-color: transparent; border-right: transparent">
+                                <input name="username" type="text" placeholder="usuario" style="width: 350px; display:inline-block; border-top-color: transparent; border-left-color: transparent; border-right: transparent">
                                 
                             </div>
     
@@ -40,14 +68,16 @@
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
 
-                                <input type="password" placeholder="contraseña" style="width: 350px; display:inline-block; border-top-color: transparent; border-left-color: transparent; border-right: transparent;">
+                                <input name="password" type="password" placeholder="contraseña" style="width: 350px; display:inline-block; border-top-color: transparent; border-left-color: transparent; border-right: transparent;">
                             </div>
 
                             <div style="margin-top: 25px; margin-left: 40% ; margin-right: 20%;">
-                                <button onclick="location.href='index.html'" style="width: 300px; height: 30px;">Login</button>
+                                
+
+                                <input type = "submit" value = "Iniciar Sesión" style="width: 300px; height: 30px;"/><br />
                             </div>
                         </div>
-                            
+                    </form>
                     </div>
                 </div>
             </div>
