@@ -10,6 +10,14 @@
    if ($status == 1) {
     include('includes/barra1.php');
    }
+
+   if ($status == 2) {
+    include('includes/barra2.php');
+   }
+
+   if ($status == 3) {
+    include('includes/barra3.php');
+   }
    
 ?>
 <!-- ESTO HACE REFERENCIA A EL TITULO DE DONDE TE ENCUENTRAS -->

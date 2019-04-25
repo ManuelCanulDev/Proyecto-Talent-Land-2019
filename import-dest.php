@@ -2,7 +2,21 @@
    include('App/session.php');
    include('includes/declaracion.php');
    include('includes/navbar.php');
-   include('includes/barra-navegacion.php');
+   if ($status == 0) {
+    include('includes/barra0.php');
+   }
+
+   if ($status == 1) {
+    include('includes/barra1.php');
+   }
+
+   if ($status == 2) {
+    include('includes/barra2.php');
+   }
+
+   if ($status == 3) {
+    include('includes/barra3.php');
+   }
 ?>
 <!-- ESTO HACE REFERENCIA A EL TITULO DE DONDE TE ENCUENTRAS -->
       <section class="content-header">
@@ -16,7 +30,7 @@
       <!-- DENTRO DE ESTAS ETIQUETAS COLOCAS TODO EL CONTENIDO -->
     <section class="content">
 
-        <p style="margin-top: 10px;">Selecciona el archivo a importar</p>
+     
 
         <div class="container">
             <form enctype="multipart/form-data">
