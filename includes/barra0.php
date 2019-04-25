@@ -53,9 +53,9 @@
             </a>
             <ul class="treeview-menu">
               
-              <li><a href=""><i class="fa fa-circle-o"></i> Ver Datos</a></li>
+              <li><a href="ver-fer.php"><i class="fa fa-circle-o"></i> Ver Datos</a></li>
               <li><a href="import-fer.php"><i class="fa fa-circle-o"></i> Importar Nuevos Datos</a></li>
-               <li><a href=""><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
+               <li><a href="indama-fer.php"><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
             </ul>
           </li>
 
@@ -68,9 +68,9 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href=""><i class="fa fa-circle-o"></i> Ver Datos</a></li>
+              <li><a href="ver-ext.php"><i class="fa fa-circle-o"></i> Ver Datos</a></li>
               <li><a href="import-extrac.php"><i class="fa fa-circle-o"></i> Importar Nuevos Datos</a></li>
-               <li><a href=""><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
+               <li><a href="indama-ext.php"><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
             </ul>
           </li>
 
@@ -84,9 +84,9 @@
             </a>
             <ul class="treeview-menu">
               
-              <li><a href=""><i class="fa fa-circle-o"></i> Ver Datos</a></li>
+              <li><a href="ver-hidro.php"><i class="fa fa-circle-o"></i> Ver Datos</a></li>
               <li><a href="import-hidro.php"><i class="fa fa-circle-o"></i> Importar Nuevos Datos</a></li>
-               <li><a href=""><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
+               <li><a href="indama-hidro.php"><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
             </ul>
           </li>
 

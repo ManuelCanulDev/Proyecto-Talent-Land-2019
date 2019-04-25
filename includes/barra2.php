@@ -16,19 +16,18 @@
         <ul class="sidebar-menu" data-widget="tree">
           
 
-          <li class="treeview">
+          <<li class="treeview">
             <a href="#">
               <i class="fa fa-files-o"></i>
               <span>Extracción</span>
               <span class="pull-right-container">
-                <span class="label label-primary pull-right">3</span>
+                <span class="label label-primary pull-right">4</span>
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Ver Datos</a></li>
-              <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Registrar Nuevos Datos</a></li>
-               <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
-              
+              <li><a href="ver-ext.php"><i class="fa fa-circle-o"></i> Ver Datos</a></li>
+              <li><a href="import-extrac.php"><i class="fa fa-circle-o"></i> Importar Nuevos Datos</a></li>
+               <li><a href="indama-ext.php"><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
             </ul>
           </li>
         </ul>

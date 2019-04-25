@@ -18,7 +18,7 @@
           <li class="treeview">
             <a href="#">
               <i class="fa fa-files-o"></i>
-              <span>Destilería</span>
+              <span>Hidrolisis</span>
               <span class="pull-right-container">
                 <span class="label label-primary pull-right">3</span>
               </span>

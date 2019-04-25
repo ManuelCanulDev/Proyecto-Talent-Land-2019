@@ -25,9 +25,9 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Ver Datos</a></li>
-              <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Registrar Nuevos Datos</a></li>
-              <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
+              <li><a href="ver-fer.php"><i class="fa fa-circle-o"></i> Ver Datos</a></li>
+              <li><a href="import-fer.php"><i class="fa fa-circle-o"></i> Importar Nuevos Datos</a></li>
+              <li><a href="indama-fer.php"><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
             </ul>
           </li>
         </ul>

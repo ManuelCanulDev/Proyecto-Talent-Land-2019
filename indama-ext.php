@@ -32,50 +32,87 @@
       <!-- DENTRO DE ESTAS ETIQUETAS COLOCAS TODO EL CONTENIDO -->
       <section class="content">
 
-      <form style="width: 100%; text-align:center; margin-left: auto; margin-right: auto; font-size: 15px;" action="register-employed.php" method="post">
+      <form style="width: 100%; text-align:center; margin-left: auto; margin-right: auto; font-size: 15px;" action="indama-ext.php" method="post">
             <div class="form-group">
                 <label for="exampleInputEmail1">Equipment id</label>
-                <input type="Name" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" style="width: 30%; margin-left: auto; margin-right: auto;" name="nombre_us">
+                <input type="text" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" style="width: 30%; margin-left: auto; margin-right: auto;" name="equipment_id">
             </div>
+
 
             <div class="form-group">
                 <label for="exampleInputEmail1">Process Value</label>
-                <input type="LastName" class="form-control" id="exampleInputLastName1" aria-describedby="emailHelp" style="width: 30%;  margin-left: auto; margin-right: auto;" name="apellido_us">
+                <input type="text" class="form-control" id="exampleInputLastName1" aria-describedby="emailHelp" style="width: 30%;  margin-left: auto; margin-right: auto;" name="process_value">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputEmail1">PLC</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  style="width: 30%; margin-left: auto; margin-right: auto;" name="correo_us">
+                <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  style="width: 30%; margin-left: auto; margin-right: auto;" name="plc">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputPassword1">Manual</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" style="width: 30%; margin-left: auto; margin-right: auto;" name="password_us">
+                <input type="text" class="form-control" id="exampleInputPassword1" style="width: 30%; margin-left: auto; margin-right: auto;" name="manual">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputPassword1">Unit Of Measures</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" style="width: 30%; margin-left: auto; margin-right: auto;" name="concon_us">
+                <input type="text" class="form-control" id="exampleInputPassword1" style="width: 30%; margin-left: auto; margin-right: auto;" name="unit_of_measure">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputPassword1">Type</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" style="width: 30%; margin-left: auto; margin-right: auto;" name="concon_us">
+                <input type="text" class="form-control" id="exampleInputPassword1" style="width: 30%; margin-left: auto; margin-right: auto;" name="type">
             </div>
             
             <div class="form-group">
                 <label for="exampleInputPassword1">samplesFrequency</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" style="width: 30%; margin-left: auto; margin-right: auto;" name="concon_us">
+                <input type="text" class="form-control" id="exampleInputPassword1" style="width: 30%; margin-left: auto; margin-right: auto;" name="samples_frequency">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputPassword1">Comments</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" style="width: 30%; margin-left: auto; margin-right: auto;" name="concon_us">
+                <input type="text" class="form-control" id="exampleInputPassword1" style="width: 30%; margin-left: auto; margin-right: auto;" name="comments">
             </div>
 
             <button type="submit" class="btn btn-primary" style="margin-top: 20px;" name="btn1">Registrar</button>
             <br>
         </form>
+
+        <?php  
+
+        if(isset($_POST['btn1'])){ 
+
+          $equipment_id = $_POST['equipment_id'];
+          $process_value = $_POST['process_value'];
+          $plc = $_POST['plc'];
+          $manual = $_POST['manual'];
+          $unit_of_measure = $_POST['unit_of_measure'];
+          $type = $_POST['type'];
+          $samples_frecuency = $_POST['samples_frequency'];
+          $comments = $_POST['comments'];
+
+       
+           $sql = "INSERT INTO extraccion (equipment_id,process_value,manual,plc,unit_of_measure,type,samples_frequency,comments) VALUES ('$equipment_id','$process_value','$manual', '$plc', '$unit_of_measure', '$type','$samples_frecuency', '$comments')";
+             $ja = mysqli_query($db, $sql);
+
+
+        if(!$ja){
+          //echo "NO REGISTRO";
+          echo "<div class='alert alert-danger' role='alert'>
+  Usuario No registrado
+</div>";
+        }else{
+          //echo "REGISTRO";
+          echo "<div class='alert alert-success' role='alert'>
+  Usuario Registrado
+</div>";
+        } 
+          
+
+        
+        }
+
+        ?>
       </section>
       <!-- DENTRO DE ESTAS ETIQUETAS COLOCAS TODO EL CONTENIDO -->
       

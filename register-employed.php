@@ -66,8 +66,8 @@
                               <option value="se" disabled selected>Seleccione un nuevo rol...</option>
                                 <option value="0">Administrador</option>
                                 <option value="1">Equipo de Fermentación</option>
-                                <option value="2">Equipo de Extracción e Hidrosis</option>
-                                <option value="3">Equipo de Destileria</option>
+                                <option value="2">Equipo de Extracción</option>
+                                <option value="3">Equipo de Hidrolisis</option>
                             </select>
                 </div>
             </div>

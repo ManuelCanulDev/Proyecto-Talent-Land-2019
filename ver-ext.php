@@ -18,6 +18,9 @@
    if ($status == 3) {
     include('includes/barra3.php');
    }
+
+   $sql = "SELECT * FROM `extraccion`";
+$resultado = mysqli_query($db, $sql);
    
 ?>
 <!-- ESTO HACE REFERENCIA A EL TITULO DE DONDE TE ENCUENTRAS -->
@@ -47,11 +50,25 @@
             </thead>
 
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>te pago</td>
-                </tr>
-            </tbody>
+
+                                      <?php while ($filas = mysqli_fetch_assoc($resultado)) {
+                              
+                                       ?>
+                                        <tr>
+                                            <td> <?php echo $filas['equipment_id'] ?></td>
+                                            <td><?php echo $filas['process_value'] ?></td>
+                                            <td><?php echo $filas['plc'] ?></td>
+                                            <td><?php echo $filas['manual'] ?></td>
+                                            <td><?php echo $filas['unit_of_measure'] ?></td>
+                                            <td><?php echo $filas['type'] ?></td>
+                                            <td><?php echo $filas['samples_frequency'] ?></td>
+                                            <td><?php echo $filas['comments'] ?></td>
+                                        </tr>
+                                       <?php 
+                                        }
+
+                                        ?>
+                                    </tbody>
         </table>
 
       </section>
