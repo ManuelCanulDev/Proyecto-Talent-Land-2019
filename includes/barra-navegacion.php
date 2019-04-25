@@ -38,7 +38,7 @@
             </a>
             <ul class="treeview-menu">
               
-              <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Empleados General</a></li>
+              <li><a href="view-employed.php"><i class="fa fa-circle-o"></i> Empleados General</a></li>
               <li><a href="register-employed.php"><i class="fa fa-circle-o"></i> Registrar Nuevo Empleado</a></li>
             </ul>
           </li>

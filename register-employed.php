@@ -2,7 +2,21 @@
    include('App/session.php');
    include('includes/declaracion.php');
    include('includes/navbar.php');
-   include('includes/barra-navegacion.php');
+   if ($status == 0) {
+    include('includes/barra0.php');
+   }
+
+   if ($status == 1) {
+    include('includes/barra1.php');
+   }
+
+   if ($status == 2) {
+    include('includes/barra2.php');
+   }
+
+   if ($status == 3) {
+    include('includes/barra3.php');
+   }
 
 ?>
 <!-- ESTO HACE REFERENCIA A EL TITULO DE DONDE TE ENCUENTRAS -->
@@ -17,7 +31,7 @@
       <!-- DENTRO DE ESTAS ETIQUETAS COLOCAS TODO EL CONTENIDO -->
       <section class="content" style="font-family: Arial, Helvetica, sans-serif">
 
-        <form style="width: 100%; text-align:center; margin-left: auto; margin-right: auto; font-size: 15px;" action="register.php" method="post">
+        <form style="width: 100%; text-align:center; margin-left: auto; margin-right: auto; font-size: 15px;" action="register-employed.php" method="post">
             <div class="form-group">
                 <label for="exampleInputEmail1">Nombre</label>
                 <input type="Name" class="form-control" id="exampleInputName1" aria-describedby="emailHelp" style="width: 30%; margin-left: auto; margin-right: auto;" name="nombre_us">
