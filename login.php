@@ -47,7 +47,7 @@
             <div style="padding-top: 10%;">
 
                 <div style=" text-align: center; color: white">
-                        <span class="logo-lg" style="font-size: 80px">Bienvenido a <b style="font-style: oblique; font-size: 100px; color: goldenrod; font-family: gadugi;">Iungo</b></span>
+                        <span class="logo-lg" style="font-size: 80px">Bienvenido a <b style="; font-size: 100px; color: goldenrod; font-family: tahoma;">Iungo</b></span>
                 </div>
 
                 <div> 

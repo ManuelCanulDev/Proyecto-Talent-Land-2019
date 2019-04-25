@@ -25,10 +25,10 @@
       <section class="content">
 
         <?php 
-        if($status == 1){
+        if($status == 0){
           echo "<h1>BABAS</h1>";
         }
-        if($status == 2){
+        if($status == 1){
           echo "<h1>BOBOS</h1>";
         }
 
