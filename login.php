@@ -52,32 +52,32 @@
 
                 <div> 
                     <div style="margin-top: 25px; width: 100%;">
-                   <form action = "" method = "post">
-                        <div>
-                            <div style="margin-left: 36% ; margin-right: 20%;">
-                                <div class="input-group-prepend" style="display:inline-block; align-content: center">
-                                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                    <form action = "" method = "post">
+                            <div>
+                                <div style="margin-left: 36% ; margin-right: 20%;">
+                                    <div class="input-group-prepend" style="display:inline-block; align-content: center">
+                                        <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                    </div>
+
+                                    <input name="username" type="text" placeholder="usuario" style="width: 350px; display:inline-block; border-top-color: transparent; border-left-color: transparent; border-right: transparent">
+                                    
+                                </div>
+        
+                                <div style="margin-left: 36% ; margin-right: 20%; margin-top: 10px;">
+                                    <div class="input-group-prepend" style="display:inline-block;">
+                                        <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                    </div>
+
+                                    <input name="password" type="password" placeholder="contraseña" style="width: 350px; display:inline-block; border-top-color: transparent; border-left-color: transparent; border-right: transparent;">
                                 </div>
 
-                                <input name="username" type="text" placeholder="usuario" style="width: 350px; display:inline-block; border-top-color: transparent; border-left-color: transparent; border-right: transparent">
-                                
-                            </div>
-    
-                            <div style="margin-left: 36% ; margin-right: 20%; margin-top: 10px;">
-                                <div class="input-group-prepend" style="display:inline-block;">
-                                    <span class="input-group-text"><i class="fas fa-key"></i></span>
+                                <div style="margin-top: 25px; margin-left: 40% ; margin-right: 20%;">
+                                    
+
+                                    <input type = "submit" value = "Iniciar Sesión" style="width: 300px; height: 30px;"/><br />
                                 </div>
-
-                                <input name="password" type="password" placeholder="contraseña" style="width: 350px; display:inline-block; border-top-color: transparent; border-left-color: transparent; border-right: transparent;">
                             </div>
-
-                            <div style="margin-top: 25px; margin-left: 40% ; margin-right: 20%;">
-                                
-
-                                <input type = "submit" value = "Iniciar Sesión" style="width: 300px; height: 30px;"/><br />
-                            </div>
-                        </div>
-                    </form>
+                        </form>
                     </div>
                 </div>
             </div>
