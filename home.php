@@ -2,7 +2,15 @@
    include('App/session.php');
    include('includes/declaracion.php');
    include('includes/navbar.php');
-   include('includes/barra-navegacion.php');
+
+   if ($status == 0) {
+    include('includes/barra0.php');
+   }
+
+   if ($status == 1) {
+    include('includes/barra1.php');
+   }
+   
 ?>
 <!-- ESTO HACE REFERENCIA A EL TITULO DE DONDE TE ENCUENTRAS -->
       <section class="content-header">
