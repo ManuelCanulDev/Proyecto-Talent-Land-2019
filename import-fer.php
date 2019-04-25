@@ -2,6 +2,7 @@
    include('App/session.php');
    include('includes/declaracion.php');
    include('includes/navbar.php');
+   
    if ($status == 0) {
     include('includes/barra0.php');
    }
@@ -17,6 +18,7 @@
    if ($status == 3) {
     include('includes/barra3.php');
    }
+
 ?>
 <!-- ESTO HACE REFERENCIA A EL TITULO DE DONDE TE ENCUENTRAS -->
       <section class="content-header">
@@ -33,17 +35,64 @@
      
 
         <div class="container">
-            <form enctype="multipart/form-data">
+            <form action="import-fer.php" method="post" enctype="multipart/form-data">
                 <div class="form-group">
-                    <input id="file-2" type="file" class="file" readonly=true>
+                    <input id="file-2" type="file" class="file" readonly=true name="archivo">
                 </div>
 
                 <div class="form-group">
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Subir</button>
-                    <button class="btn btn-default" type="reset">Borrar</button>
+                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#myModl" name="enviar">Subir</button>
                 </div>
             </form>
         </div>
+
+        <?php 
+      if(isset($_POST['enviar'])){
+        include('Classes/PHPExcel/IOFactory.php');
+        $archivo = $_FILES['archivo']['name'];
+        $archivocopiado = $_FILES['archivo']['tmp_name'];
+        $archivoguardado = "copia_".$archivo;
+        
+        $objPHPExcel = PHPExcel_IOFactory::load($archivocopiado);
+
+        $objPHPExcel->setActiveSheetIndex(0);
+
+
+        echo "<table border=1><tr><td>equipment_id</td><td>process_value</td><td>PLC</td><td>manual</td><td>unit_of_measure</td><td>type</td><td>samples_frequency</td><td>Comments</td></tr>";
+
+        for ($i=2; $i <= 313; $i++) { 
+            $equipment_id = $objPHPExcel->getActiveSheet()->getCell('B'.$i)->getCalculatedValue();
+            $process_value = $objPHPExcel->getActiveSheet()->getCell('C'.$i)->getCalculatedValue();
+            $plc = $objPHPExcel->getActiveSheet()->getCell('D'.$i)->getCalculatedValue();
+            $manual = $objPHPExcel->getActiveSheet()->getCell('E'.$i)->getCalculatedValue();
+            $unit_of_measure = $objPHPExcel->getActiveSheet()->getCell('F'.$i)->getCalculatedValue();
+            $type = $objPHPExcel->getActiveSheet()->getCell('G'.$i)->getCalculatedValue();
+            $samples_frequency = $objPHPExcel->getActiveSheet()->getCell('H'.$i)->getCalculatedValue();
+            $comments = $objPHPExcel->getActiveSheet()->getCell('I'.$i)->getCalculatedValue();
+
+            echo "<tr>";
+            echo "<td>".$equipment_id."</td>";
+            echo "<td>".$process_value."</td>";
+            echo "<td>".$plc."</td>";
+            echo "<td>".$manual."</td>";
+            echo "<td>".$unit_of_measure."</td>";
+            echo "<td>".$type."</td>";
+            echo "<td>".$samples_frequency."</td>";
+            echo "<td>".$comments."</td>";
+            echo "<tr>";
+
+            $sql = "INSERT INTO fermentacion(equipment_id, process_value, plc, manual, unit_of_measure, type, samples_frecuency, comments) VALUES ('$equipment_id','$process_value','$plc','$manual','$unit_of_measure','$type','$samples_frequency','$comments')";
+            
+         
+            $ja = mysqli_query($db, $sql);
+
+          
+
+        }         
+
+      }
+
+         ?>
 
         <script>
         $("#file-3").fileinput({

@@ -53,10 +53,9 @@
             </a>
             <ul class="treeview-menu">
               
-              <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Ver Estadistíca</a></li>
-              <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Ver Datos</a></li>
-              <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Importar Nuevos Datos</a></li>
-               <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
+              <li><a href=""><i class="fa fa-circle-o"></i> Ver Datos</a></li>
+              <li><a href="import-fer.php"><i class="fa fa-circle-o"></i> Importar Nuevos Datos</a></li>
+               <li><a href=""><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
             </ul>
           </li>
 
@@ -69,11 +68,9 @@
               </span>
             </a>
             <ul class="treeview-menu">
-              
-             <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Ver Estadistíca</a></li>
-              <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Ver Datos</a></li>
+              <li><a href=""><i class="fa fa-circle-o"></i> Ver Datos</a></li>
               <li><a href="import-extrac.php"><i class="fa fa-circle-o"></i> Importar Nuevos Datos</a></li>
-               <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
+               <li><a href=""><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
             </ul>
           </li>
 
@@ -87,29 +84,13 @@
             </a>
             <ul class="treeview-menu">
               
-             <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Ver Estadistíca</a></li>
-              <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Ver Datos</a></li>
+              <li><a href=""><i class="fa fa-circle-o"></i> Ver Datos</a></li>
               <li><a href="import-hidro.php"><i class="fa fa-circle-o"></i> Importar Nuevos Datos</a></li>
-               <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
+               <li><a href=""><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
             </ul>
           </li>
 
-          <li class="treeview">
-            <a href="#">
-              <i class="fa fa-files-o"></i>
-              <span>Destilería</span>
-              <span class="pull-right-container">
-                <span class="label label-primary pull-right">4</span>
-              </span>
-            </a>
-            <ul class="treeview-menu">
-              
-             <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Ver Estadistíca</a></li>
-              <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Ver Datos</a></li>
-              <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Importar Nuevos Datos</a></li>
-               <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Ingresar Datos Manualmente</a></li>
-            </ul>
-          </li>
+          
         </ul>
       </section>
       <!-- /.sidebar -->
